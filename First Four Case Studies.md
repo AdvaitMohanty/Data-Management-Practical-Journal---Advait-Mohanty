@@ -6,7 +6,7 @@ This project aims to develop a Library Management System for college libraries t
 
 # Table 1 - Book
 This table contains all details pertaining to the books.
--'Book_ID (Primary Key)
+- 'Book_ID (Primary Key)
 - 'Title'
 - 'Author'
 - 'Publisher'
@@ -16,21 +16,21 @@ This table contains all details pertaining to the books.
 
 # Table 2 - Member
 This table pertains to the holders of the library card, i.e. the members. 
--'Member_ID' (Primary Key)
--'Name 
--'Department'
--'Membership_Date'
--'Contact'
+- 'Member_ID' (Primary Key)
+- 'Name 
+- 'Department'
+- 'Membership_Date'
+- 'Contact'
 
 # Table 3 - Transaction
 This table pertains to every book that is borrowed from the library.
--'Transaction_ID'
--'Book_ID'(Foreign Key to Book)
--'Member_ID'(Foreign Key to Member)
--'Issue_Date' 
--'Return_Date' 
--'Fine'
-
+- 'Transaction_ID'
+- 'Book_ID'(Foreign Key to Book)
+- 'Member_ID'(Foreign Key to Member)
+- 'Issue_Date' 
+- 'Return_Date' 
+- 'Fine'
+ 
 # Queries
 Here, we want the number of times books have been borrowed, name of the borrower, title of the book and fine(if any), a combined table of Member and Transaction and, finally one for Book and Transaction. Queries are given below :- 
 
