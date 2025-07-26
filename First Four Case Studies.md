@@ -34,7 +34,7 @@ This table pertains to every book that is borrowed from the library.
 # Queries
 Here, we want the number of times books have been borrowed, name of the borrower, title of the book and fine(if any), a combined table of Member and Transaction and, finally one for Book and Transaction. Queries are given below :- 
 
-'''sql
+''' sql
 select count(*) from TRANSACTION where Fine > 0;
 
 select MEMBER.Name, BOOK.Title, Transaction.Fine from TRANSACTION inner join BOOK on TRANSACTION.Book_ID = BOOK.Book_ID inner join MEMBER on TRANSACTION.Member_ID = MEMBER.MEMBER_ID;
