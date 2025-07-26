@@ -44,5 +44,47 @@ select * from MEMBER inner join TRANSACTION on TRANSACTION.Member_ID = MEMBER.Me
 
 select * from BOOK inner join TRANSACTION on TRANSACTION.Book_ID = BOOK.Book_ID where TRANSACTION.Fine > 0;
 
+``````
 
 # Hospital Management System
+This project aims to provide seperate tables for patient data, doctor data and appointment data, to easily pair the three without one massive table, which is hard and complicated to read and maintain. 
+
+# Table 1 - Patient
+This table contains data pertaining to all patients.
+- 'Patient_ID' (Primary key)
+- 'Name'
+- 'Date of Birth'
+- 'Gender'
+- 'Contact' 
+- 'Address'
+
+# Table 2 - Doctor
+This table contains all the data pertaining to the doctors in the hospital.
+- 'Doctor_ID'
+- 'Name'
+- 'Specialization'
+- 'Contact'
+
+# Table 3 - Appointment
+This table contains all the appointment info i.e. when the patient meets the doctor. 
+- 'Appointment_ID'
+- 'Patient_ID' (Foriegn Key to Patient)
+- 'Doctor_ID' (Foriegn Key to Doctor)
+- 'Date'
+- 'Time' 
+- 'Status'
+
+# Queries
+Here, we want to select the combined table for Dcotor and Appointment. Inner Join gives priority to the Doctor Table. We also want the Patient Name, Date and Time for every appointment for a doctor with ID 102 for the day. We use a combination of Patient and Appointment for this, as well as a constraint to check for the Doctor's ID and the Date. Thankfully, SQL recognizes currect dates.
+
+```sql
+
+select * from Doctor inner join Appointment on Doctor.Doctor_ID = Appointment.Doctor_ID;
+
+select patient.name AS Patient, Appointment.Date, Appointment.Time FROM Appointment inner join Patient 
+on Appointment.Patient_ID = Patient.Patient_ID 
+where Appointment.Doctor_ID = 102 and date = current_date();
+
+``````
+
+
