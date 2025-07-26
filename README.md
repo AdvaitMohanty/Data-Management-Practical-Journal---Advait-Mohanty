@@ -6,12 +6,12 @@ This project aims to develop a Library Management System for college libraries t
 
 🔹 Entities & Attributes:
 
-Entity                              Attributes
+Entity                                                               Attributes
 
-Book           Book_ID, Title, Author, ISBN, Category, Copies_Available
+Book                 Book_ID, Title, Author, ISBN, Category, Copies_Available
 
-Member         Member_ID, Name, Department, Contact, Membership_Date
+Member                  Member_ID, Name, Department, Contact, Membership_Date
 
-Transaction    Transaction_ID, Book_ID, Member_ID, Issue_Date, Return_Date, Fine
+Transaction             Transaction_ID, Book_ID, Member_ID, Issue_Date, Return_Date, Fine
 
  
