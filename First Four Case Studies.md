@@ -40,9 +40,9 @@ select count(*) from TRANSACTION where Fine > 0;
 
 select MEMBER.Name, BOOK.Title, Transaction.Fine from TRANSACTION inner join BOOK on TRANSACTION.Book_ID = BOOK.Book_ID inner join MEMBER on TRANSACTION.Member_ID = MEMBER.MEMBER_ID;
 
-select * from MEMBER inner join TRANSACTION on TRANSACTION.Member_ID = MEMBER.Member_ID;
+select * from MEMBER join TRANSACTION on TRANSACTION.Member_ID = MEMBER.Member_ID;
 
-select * from BOOK inner join TRANSACTION on TRANSACTION.Book_ID = BOOK.Book_ID where TRANSACTION.Fine > 0;
+select * from BOOK join TRANSACTION on TRANSACTION.Book_ID = BOOK.Book_ID where TRANSACTION.Fine > 0;
 
 ``````
 
@@ -81,7 +81,7 @@ Here, we want to select the combined table for Doctor and Appointment. Inner Joi
 
 select * from Doctor inner join Appointment on Doctor.Doctor_ID = Appointment.Doctor_ID;
 
-select patient.name AS Patient, Appointment.Date, Appointment.Time FROM Appointment inner join Patient 
+select patient.name AS Patient, Appointment.Date, Appointment.Time FROM Appointment  join Patient 
 on Appointment.Patient_ID = Patient.Patient_ID 
 where Appointment.Doctor_ID = 102 and date = current_date();
 
