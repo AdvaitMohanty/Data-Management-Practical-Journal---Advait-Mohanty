@@ -164,7 +164,7 @@ This table actually tells us which student goes into which room. It also gives u
 - 'CheckOut_Date'
 
 # Queries
-Here, we just need to find the number of current students staying in hostel. We use the same logic as the car rental database, where we used the DATE, if there is not check out date, the person is still in the hostel (hasn't checked out yet). We will need a join of all three tables, and the constraint will be checking whether the checkout date is a null value or not. 
+Here, we just need to find the number of current students staying in hostel. We use the same logic as the car rental database, where we used the DATE, if there is no check out date, the person is still in the hostel (hasn't checked out yet). We will need a join of all three tables, and the constraint will be checking whether the checkout date is a null value or not. 
 
 ```sql
 select student.name, room.room_ID, room.room_type from allocation
