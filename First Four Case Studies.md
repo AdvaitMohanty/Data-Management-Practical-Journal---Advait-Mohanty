@@ -173,5 +173,3 @@ join room on allocation.Room_ID = room.Room_ID
 where allocation.checkout_date IS NULL;
 
 ``````
-
-               x-----------------------------------------------------------------------------------------------------------------x
