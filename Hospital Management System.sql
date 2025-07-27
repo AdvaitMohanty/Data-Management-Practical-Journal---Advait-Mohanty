@@ -46,7 +46,7 @@ INSERT INTO appointment values(823498, 002, 103, '2025-08-30', '2025-08-30 20:30
 INSERT INTO appointment values(297346, 003, 102, '2025-07-26', '2025-07-26 20:30:00', 'Completed');
 INSERT INTO appointment values(298343, 002, 102, '2025-07-27', '2025-07-27 14:30:00', 'Booked');
 
-select * from Doctor inner join Appointment on Doctor.Doctor_ID = Appointment.Doctor_ID;
+select * from Doctor join Appointment on Doctor.Doctor_ID = Appointment.Doctor_ID;
 
 select patient.name AS Patient, Appointment.Date, Appointment.Time FROM Appointment inner join Patient 
 on Appointment.Patient_ID = Patient.Patient_ID 
