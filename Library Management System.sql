@@ -21,7 +21,7 @@ Contact VARCHAR(10)
 );
 
 create table TRANSACTION (
-Transaction_ID INT,
+Transaction_ID INT Primary Key,
 Book_ID INT,
 Member_ID INT,
 Issue_Date DATE,
