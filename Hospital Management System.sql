@@ -48,7 +48,7 @@ INSERT INTO appointment values(298343, 002, 102, '2025-07-27', '2025-07-27 14:30
 
 select * from Doctor join Appointment on Doctor.Doctor_ID = Appointment.Doctor_ID;
 
-select patient.name AS Patient, Appointment.Date, Appointment.Time FROM Appointment inner join Patient 
+select patient.name AS Patient, Appointment.Date, Appointment.Time FROM Appointment join Patient 
 on Appointment.Patient_ID = Patient.Patient_ID 
 where Appointment.Doctor_ID = 102 and date = current_date();
 
