@@ -71,4 +71,8 @@ join car on rental.car_ID = car.car_ID
 join customer on customer.customer_ID = rental.customer_ID
 where Availability_Status = 'Not Available';
 
+select car.model, rental.rental_date, customer.name from rental 
+join car on rental.car_ID = car.car_ID
+join customer on customer.customer_ID = rental.customer_ID
+where Return_Date IS NULL;
 
