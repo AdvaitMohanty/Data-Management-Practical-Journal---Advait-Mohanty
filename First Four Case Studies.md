@@ -24,7 +24,7 @@ This table pertains to the holders of the library card, i.e. the members.
 
 # Table 3 - Transaction
 This table pertains to every book that is borrowed from the library.
-- 'Transaction_ID'
+- 'Transaction_ID' (Primary Key)
 - 'Book_ID'(Foreign Key to Book)
 - 'Member_ID'(Foreign Key to Member)
 - 'Issue_Date' 
@@ -67,7 +67,7 @@ This table contains all the data pertaining to the doctors in the hospital.
 
 # Table 3 - Appointment
 This table contains all the appointment info i.e. when the patient meets the doctor. 
-- 'Appointment_ID'
+- 'Appointment_ID' (Primary Key)
 - 'Patient_ID' (Foriegn Key to Patient)
 - 'Doctor_ID' (Foriegn Key to Doctor)
 - 'Date'
