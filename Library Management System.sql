@@ -55,9 +55,9 @@ select count(*) from TRANSACTION where Fine > 0;
 
 select MEMBER.Name, BOOK.Title, Transaction.Fine from TRANSACTION inner join BOOK on TRANSACTION.Book_ID = BOOK.Book_ID inner join MEMBER on TRANSACTION.Member_ID = MEMBER.MEMBER_ID;
 
-select * from MEMBER inner join TRANSACTION on TRANSACTION.Member_ID = MEMBER.Member_ID;
+select * from MEMBER join TRANSACTION on TRANSACTION.Member_ID = MEMBER.Member_ID;
 
-select * from BOOK inner join TRANSACTION on TRANSACTION.Book_ID = BOOK.Book_ID where TRANSACTION.Fine > 0;
+select * from BOOK join TRANSACTION on TRANSACTION.Book_ID = BOOK.Book_ID where TRANSACTION.Fine > 0;
 
 
 
