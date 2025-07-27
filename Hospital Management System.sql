@@ -18,7 +18,7 @@ Contact varchar(10)
 );
 
 create table appointment (
-Appointment_ID INT, 
+Appointment_ID INT Primary Key, 
 Patient_ID INT, 
 Doctor_ID INT, 
 Date date, 
